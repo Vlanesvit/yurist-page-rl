@@ -1,0 +1,127 @@
+.rs-features__container {
+  position: relative;
+  z-index: 1;
+}
+.rs-features__block {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 991.98px) {
+  .rs-features__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-features__block {
+    margin-top: 32px;
+  }
+}
+.rs-features__block::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  width: 100%;
+  height: calc(100% - 54px);
+  border: 3px solid #f6f1e9;
+  border-radius: 16px;
+  z-index: -1;
+}
+@media (max-width: 991.98px) {
+  .rs-features__block::before {
+    left: 24px;
+    width: calc(100% - 48px);
+  }
+}
+@media (min-width: 991.98px) {
+  .rs-features__column:first-child {
+    grid-column: 1/2;
+  }
+  .rs-features__column:last-child {
+    grid-column: 2/5;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-features__column:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.rs-features__item {
+  padding: 32px 20px;
+  background: #f6f1e9;
+  border-radius: 16px;
+  color: #111111;
+}
+@media (max-width: 389.98px) {
+  .rs-features__item {
+    padding: 30px 15px;
+  }
+}
+.rs-features__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media (max-width: 991.98px) {
+  .rs-features__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+.rs-features__item h5 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+@media (max-width: 991.98px) {
+  .rs-features__item h5 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 389.98px) {
+  .rs-features__item h5 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-features__item h6 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 389.98px) {
+  .rs-features__item h6 {
+    font-size: 16px;
+  }
+}
+.rs-features__item ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.rs-features__item ul li::before {
+  content: "";
+  max-width: 5px;
+  max-height: 5px;
+  min-width: 5px;
+  min-height: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 12px;
+  margin-top: 11px;
+  background-color: #111;
+}
+.rs-features__bg {
+  top: 68px;
+  right: -677px;
+  width: 1051px;
+  height: 1051px;
+}
+@media (max-width: 991.98px) {
+  .rs-features__bg {
+    top: 252px;
+    right: -203px;
+    width: 731px;
+    height: 731px;
+  }
+}
