@@ -41,17 +41,21 @@
 		}
 
 		h1 {
-			// @media (max-width: 374.98px) {
-			// 	// Технически это одно и то же, но используйте и то, и другое
-			// 	overflow-wrap: break-word;
-			// 	word-wrap: break-word;
-			// 	// Это самое опасное в WebKit, так как оно ломает вещи везде, где бы они ни были
-			// 	word-break: break-all;
-			// 	// Вместо этого используйте этот нестандартный:
-			// 	word-break: break-word;
-			// 	// Добавляет дефис там, где слово ломается, если поддерживается
-			// 	hyphens: auto;
-			// }
+			@media (max-width: 374.98px) {
+				// Технически это одно и то же, но используйте и то, и другое
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+				// Это самое опасное в WebKit, так как оно ломает вещи везде, где бы они ни были
+				word-break: break-all;
+				// Вместо этого используйте этот нестандартный:
+				word-break: break-word;
+				// Добавляет дефис там, где слово ломается, если поддерживается
+				hyphens: auto;
+
+				br {
+					display: none;
+				}
+			}
 		}
 
 		h4 {
@@ -78,12 +82,11 @@
 		margin: -8.4% -9% 0 -26%;
 
 		@media (max-width: 991.98px) {
-			padding-bottom: 234px;
 			margin: 0;
 			display: flex;
 			flex-direction: column-reverse;
-			align-items: flex-start;
-			justify-content: flex-start;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
@@ -93,18 +96,8 @@
 		height: 100%;
 
 		@media (max-width: 991.98px) {
-			position: absolute;
-			top: -40px;
-			right: -280px;
-			width: 658px;
-			height: 548px;
-
-			@media (max-width: 389.98px) {
-				width: 550px;
-				height: 450px;
-				top: 0;
-				right: -250px;
-			}
+			width: auto;
+			margin: -10% -30% -20%;
 		}
 
 		img {
@@ -121,8 +114,8 @@
 		margin: -6.5% auto 0;
 
 		@media (max-width: 991.98px) {
-			max-width: 192px;
-			margin: 55px 0px 0px 0px;
+			max-width: 100%;
+			margin: 30px 0px 0px 0px;
 			text-align: left;
 		}
 	}
@@ -163,8 +156,9 @@
 		}
 
 		@media (max-width: 991.98px) {
-			bottom: 0;
+			bottom: 35%;
 			right: auto;
+			font-size: 12px;
 			left: 0;
 			transform: rotate(180deg);
 			flex-direction: row-reverse;

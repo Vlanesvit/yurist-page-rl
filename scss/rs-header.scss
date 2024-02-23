@@ -2,7 +2,7 @@
 	position: relative;
 	z-index: 999;
 	width: 100%;
-	transition: background-color 0.3s ease 0s;
+	transition: background-color 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
 	background-color: transparent;
 
 	@media (max-width: 991.98px) {
@@ -56,13 +56,13 @@
 			height: 60px;
 			cursor: pointer;
 			z-index: 5;
-			transition: all 0.5s ease 0s;
+			transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
 
 			span,
 			&::before,
 			&::after {
 				content: "";
-				transition: all 0.5s ease 0s;
+				transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
 				position: absolute;
 				height: 2px;
 				width: 53px;

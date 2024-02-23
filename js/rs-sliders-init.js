@@ -14,15 +14,15 @@ function initSliders() {
 			// const pagination = sliderBlock.querySelector('.rs-authors__pagination');
 
 			const sliderSwiper = new Swiper(sliderBlock, {
-				// Автопрокрутка
-				autoplay: {
-					// Пауза между прокруткой
-					delay: 10000,
-					// Закончить на последнем слайде
-					stopOnLastSlide: false,
-					// Отключить после ручного переключения
-					disableOnInteraction: false,
-				},
+				// // Автопрокрутка
+				// autoplay: {
+				// 	// Пауза между прокруткой
+				// 	delay: 10000,
+				// 	// Закончить на последнем слайде
+				// 	stopOnLastSlide: false,
+				// 	// Отключить после ручного переключения
+				// 	disableOnInteraction: false,
+				// },
 
 				// Обновить свайпер
 				// при изменении элементов слайдера
@@ -102,15 +102,15 @@ function initSliders() {
 			// Инициализация слайдера
 			const enableSwiper = function () {
 				priceSlider = new Swiper(sliderBlock, {
-					// Автопрокрутка
-					autoplay: {
-						// Пауза между прокруткой
-						delay: 10000,
-						// Закончить на последнем слайде
-						stopOnLastSlide: false,
-						// Отключить после ручного переключения
-						disableOnInteraction: true,
-					},
+					// // Автопрокрутка
+					// autoplay: {
+					// 	// Пауза между прокруткой
+					// 	delay: 10000,
+					// 	// Закончить на последнем слайде
+					// 	stopOnLastSlide: false,
+					// 	// Отключить после ручного переключения
+					// 	disableOnInteraction: true,
+					// },
 
 					// Обновить свайпер
 					// при изменении элементов слайдера
