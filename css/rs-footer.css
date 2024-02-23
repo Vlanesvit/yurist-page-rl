@@ -86,9 +86,6 @@
   }
 }
 .rs-footer__contact ul li img {
-  border-radius: 50%;
-  padding: 10px;
-  border: 2px solid #fff;
   margin-right: 16px;
 }
 .rs-footer__contact ul li:not(:last-child) {

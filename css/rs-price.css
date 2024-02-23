@@ -22,21 +22,41 @@
 }
 @media (min-width: 991.98px) {
   .rs-price__swiper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -12px;
   }
 }
-.rs-price__slide {
-  min-height: 100px;
-  height: auto;
+@media (min-width: 991.98px) {
+  .rs-price__slide {
+    padding: 12px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 .rs-price__item {
   height: 100%;
+  width: 100%;
   border-radius: 24px;
   background-color: #fff;
   color: #000000;
   position: relative;
+  padding: 64px 23px 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .rs-price__item::before {
   content: "";
@@ -63,11 +83,39 @@
     top: 0;
     left: 0;
   }
+  .rs-price__item:hover .rs-price__desc_font {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .rs-price__item:hover .rs-price__desc_back {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
-.rs-price__item a {
-  height: 100%;
-  padding: 64px 23px 56px;
+.rs-price__img {
+  margin-bottom: 16px;
+}
+.rs-price__desc {
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: hidden;
+}
+.rs-price__desc_font, .rs-price__desc_back {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,30 +123,78 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.rs-price__img {
-  margin-bottom: 16px;
+.rs-price__desc_font {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
-.rs-price__desc {
-  margin-bottom: 24px;
+.rs-price__desc_back {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
 .rs-price__desc h5 {
   font-weight: 700;
+  text-align: center;
 }
 @media (max-width: 991.98px) {
   .rs-price__desc h5 {
     font-size: 20px;
   }
 }
-.rs-price__footer {
-  margin: auto 0px 0px 0px;
-}
-.rs-price__footer h6 {
+.rs-price__desc h6 {
   font-size: 16px;
+  margin-top: 24px;
+  text-align: center;
+}
+.rs-price__desc p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111;
+}
+@media (max-width: 1439.98px) {
+  .rs-price__desc p {
+    font-size: 13px;
+  }
+}
+.rs-price__desc ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 1439.98px) {
+  .rs-price__desc ul li {
+    font-size: 13px;
+  }
+}
+.rs-price__desc ul li::before {
+  content: "";
+  position: relative;
+  display: block;
+  max-width: 4px;
+  max-height: 4px;
+  min-width: 4px;
+  min-height: 4px;
+  border-radius: 50%;
+  background-color: #111;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.rs-price__footer {
+  margin: 24px 0px 0px 0px;
 }
 .rs-price__footer .rs-btn {
   margin-top: 24px;

@@ -29,25 +29,36 @@
 	// .rs-price__swiper
 	&__swiper {
 		@media (min-width: 991.98px) {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			gap: 24px;
+			display: flex;
+			flex-wrap: wrap;
+			margin: -12px;
 		}
 	}
 
 	// .rs-price__slide
 	&__slide {
-		min-height: 100px;
-		height: auto;
+		// min-height: 100px;
+		// height: auto;
+
+		@media (min-width: 991.98px) {
+			padding: 12px;
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
 	}
 
 	// .rs-price__item
 	&__item {
 		height: 100%;
+		width: 100%;
 		border-radius: 24px;
 		background-color: #fff;
 		color: #000000;
 		position: relative;
+		padding: 64px 23px 56px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		&::before {
 			content: "";
@@ -74,17 +85,15 @@
 					top: 0;
 					left: 0;
 				}
-			}
-		}
 
-		a {
-			height: 100%;
-			padding: 64px 23px 56px;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
+				.rs-price__desc_font {
+					transform: translateX(-100%);
+				}
+
+				.rs-price__desc_back {
+					transform: translateX(-100%);
+				}
+			}
 		}
 	}
 
@@ -95,24 +104,89 @@
 
 	// .rs-price__desc
 	&__desc {
-		margin-bottom: 24px;
+		width: 100%;
+		flex-grow: 1;
+		position: relative;
+		display: inline-flex;
+		overflow: hidden;
+
+		&_font,
+		&_back {
+			flex: 0 0 100%;
+			transition: transform 0.3s ease 0s;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_font {
+			transform: translateX(-0%);
+		}
+
+		&_back {
+			transform: translateX(-0%);
+		}
 
 		h5 {
 			font-weight: 700;
+			text-align: center;
 
 			@media (max-width: 991.98px) {
 				font-size: 20px;
+			}
+		}
+
+		h6 {
+			font-size: 16px;
+			margin-top: 24px;
+			text-align: center;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #111;
+
+			@media (max-width: 1439.98px) {
+				font-size: 13px;
+			}
+		}
+
+		ul {
+			li {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 150%;
+				color: #111;
+				display: flex;
+				align-items: flex-start;
+
+				@media (max-width: 1439.98px) {
+					font-size: 13px;
+				}
+
+				&::before {
+					content: "";
+					position: relative;
+					display: block;
+					max-width: 4px;
+					max-height: 4px;
+					min-width: 4px;
+					min-height: 4px;
+					border-radius: 50%;
+					background-color: #111;
+					margin-top: 8px;
+					margin-left: 10px;
+					margin-right: 10px;
+				}
 			}
 		}
 	}
 
 	// .rs-price__footer
 	&__footer {
-		margin: auto 0px 0px 0px;
-
-		h6 {
-			font-size: 16px;
-		}
+		margin: 24px 0px 0px 0px;
 
 		.rs-btn {
 			margin-top: 24px;
