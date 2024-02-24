@@ -79,20 +79,31 @@
 			}
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				&::before {
-					top: 0;
-					left: 0;
-				}
+		.rs-btn {
+			color: #100f0f;
+			border-color: #1d1919;
+			background-color: transparent;
+			cursor: pointer;
+		}
 
-				.rs-price__desc_font {
-					transform: translateX(-100%);
-				}
+		&:hover {
+			&::before {
+				top: 0;
+				left: 0;
+			}
 
-				.rs-price__desc_back {
-					transform: translateX(-100%);
-				}
+			.rs-price__desc_font {
+				transform: translateX(-100%);
+			}
+
+			.rs-price__desc_back {
+				transform: translateX(-100%);
+			}
+
+			.rs-btn {
+				color: #fff;
+				border-color: #1d1919;
+				background-color: #1d1919;
 			}
 		}
 	}
